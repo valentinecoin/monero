@@ -140,6 +140,10 @@ if(CMAKE_BUILD_TYPE STREQUAL Debug)
   add_subdirectory(debug_utilities)
 endif()
 
+# set this to 0 if per-block checkpoint needs to be disabled
+
+set(PER_BLOCK_CHECKPOINT 0)
+
 if(PER_BLOCK_CHECKPOINT)
   add_subdirectory(blocks)
 endif()
